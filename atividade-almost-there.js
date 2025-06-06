@@ -164,12 +164,30 @@ console.table(inventarioAlpha)
 let meio = inventarioBeta.length/2
 console.log(meio);
 
-let itensContaminados=inventarioBeta.splice(11,2)
+let itensContaminados=inventarioBeta.splice(11,2);
 console.log(`os itens contaminados que foram removidos foram: ${itensContaminados}`);
 
 //17 Unifique os inventários Alpha e Beta em uma única estrutura.
-let inventariosUnidos=[]
+let inventariosUnidos=[];
 
-inventariosUnidos =inventarioAlpha.concat(inventarioBeta)
+inventariosUnidos =inventarioAlpha.concat(inventarioBeta);
 
-console.table(inventariosUnidos)
+console.table(inventariosUnidos);
+
+//18 Junte os cinco primeiros itens de cada nave em uma nova vitrine de destaques.
+let cincoAlpha=inventarioAlpha.slice(0,5);
+
+let cincoBeta=inventarioBeta.slice(0,5);
+
+let vitrineEmDestaque=cincoAlpha.concat(cincoBeta);
+
+console.table(vitrineEmDestaque);
+//26 Inverta a ordem dos 15 primeiros itens da Alpha como simulação de viagem no tempo.
+let quinzePrimeiros=inventarioAlpha.slice(0,5);
+let quinzePrimeirosReverse=quinzePrimeiros.reverse();
+
+let ulimos = inventarioAlpha.splice(16, inventarioAlpha.length);
+
+let novoFinal=quinzePrimeiros.concat(ulimos);
+
+console.table(novoFinal)
